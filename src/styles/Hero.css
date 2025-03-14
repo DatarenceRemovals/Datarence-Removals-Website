@@ -1,0 +1,165 @@
+
+.hero {
+    background-image: url("/public/images/grid-blocks.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #065860;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .hero-txt {
+    color: white;
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 50px;
+  }
+
+  .hero-img {
+    flex: 70%;
+    background-color: white;
+    position: relative;
+  }
+
+  .hero-img img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  
+  #bootcamp-title {
+    background-color: #f6bb61;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: bold;
+    margin-bottom: 16px;
+    width: fit-content;
+    padding: 9px 12px;
+    border-radius: 40px;
+    color: black;
+  }
+  
+  .typed-heading {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 16px;
+    max-width: 711px;
+    font-weight: bolder;
+    min-height: 100px;
+  }
+  
+.typed-paragraph {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    margin-bottom: 24px;
+    color: #cacece;
+    max-width: 681px;
+    min-height: 120px;
+  }
+  
+  
+  .hero-btns {
+    margin-top: 35px;
+    height: 48px;
+  }
+  
+  .apply-btn {
+    padding: 12px;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-btn {
+    background-color: #f6bb61;
+    color: #032c30;
+    white-space: nowrap;
+    border-radius: 5px;
+  }
+
+  
+  
+  
+  
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 50px;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hero-img {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 2rem;
+      flex: 50%;
+    }
+  
+    .hero-txt {
+      max-width: 100%;
+      flex-basis: 100%;
+      flex: 50%;
+    }
+  
+    .typed-heading {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      max-width: none;
+    }
+  
+  .typed-paragraph {
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    }
+  
+    .apply-btn {
+      font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 0 40px;
+      padding-bottom: 100px;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .typed-heading {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+  
+  .typed-paragraph {
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+  
+  
+    .apply-btn,
+    .curriculum-btn {
+      font-size: clamp(0.8rem, 1.6vw, 1rem) !important;
+      border: 0.1px solid black;
+    }
+  }
+  
+  @media (max-width: 467px) {
+    .hero {
+      padding: 0 20px;
+      padding-bottom: 100px;
+    }
+  }
