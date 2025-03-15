@@ -75,8 +75,9 @@
     }
   
     .about-us-img img {
-      min-height: 400px; /* Adjust image height for smaller screens */
+      max-height: 300px; /* Adjust image height for smaller screens */
       border-radius: 15px; /* Slightly reduce border-radius */
+      height: 300px !important;
     }
   
     .about-us-txt {
@@ -106,8 +107,9 @@
     }
   
     .about-us-img img {
-      max-height: 300px; /* Further reduce image height for mobile */
+      max-height: 250px; /* Further reduce image height for mobile */
       border-radius: 10px; /* Further reduce border-radius */
+      height: 250px;
     }
   
     .about-us-txt {
