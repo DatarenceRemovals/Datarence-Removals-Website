@@ -1,4 +1,4 @@
-/* Navbar styling */
+/* General Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,13 +9,16 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: padding 0.3s ease;
 }
 
+/* Logo Styling */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
@@ -41,12 +44,13 @@
   font-size: 1.1rem;
 }
 
+/* Navigation Buttons */
 .nav-btn {
   display: flex;
   gap: 20px;
 }
 
-/* Contact button styling */
+/* Contact Buttons */
 .contact-btn {
   background-color: #f6bb61;
   color: black;
@@ -58,7 +62,7 @@
   transition: all 0.3s ease;
 }
 
-.contact-btn a{
+.contact-btn a {
   color: black;
   text-decoration: none;
 }
@@ -80,7 +84,7 @@
   transform: scale(1.05);
 }
 
-/* Wiggle animation */
+/* Wiggle Animation */
 @keyframes wiggle {
   0%, 100% {
     transform: rotate(0deg);
@@ -98,4 +102,93 @@
 
 .wiggle {
   animation: wiggle 0.5s ease;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hamburger menu becomes visible on smaller screens */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav-links and buttons initially on mobile */
+  .nav-links,
+  .nav-btn {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center; /* Center the links */
+  }
+
+  .nav-links.active,
+  .nav-btn.active {
+    display: flex;
+    justify-content: center; /* Center the entire nav menu */
+    align-items: center;
+    gap: 1.5rem; /* Adjust spacing between links */
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0; /* Add padding between links for better spacing */
+  }
+
+  .contact-btn {
+    width: auto; /* Remove 100% width to prevent overflow */
+    text-align: center;
+  }
+
+  .contact-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Proper gaps between buttons */
+  .nav-btn.active .contact-btn {
+    margin: 10px 0; /* Gap between buttons in mobile view */
+  }
+}
+
+/* For screens 480px and smaller */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 1rem 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
 }

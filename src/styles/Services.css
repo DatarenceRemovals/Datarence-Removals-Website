@@ -1,8 +1,9 @@
-
+/* Services Section */
 .services-section {
   padding: 100px;
   text-align: center;
   background-color: #f7f7f7;
+  overflow: hidden;
 }
 
 .section-subtitle {
@@ -24,12 +25,12 @@
   color: #333;
 }
 
-
+/* Ensure service cards don't shrink below 300px */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust based on available space */
   gap: 32px;
-  max-width: 1350px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -43,6 +44,7 @@
   justify-content: space-between;
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
 }
 
 .service-card:hover {
@@ -75,7 +77,6 @@
   text-align: justify;
 }
 
-
 .service-card button {
   margin-top: 20px;
   padding: 0.45rem 1.2rem;
@@ -94,20 +95,83 @@
   transform: scale(1.05);
 }
 
-
+/* Media query for large screens (max-width: 992px) */
 @media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .services-section {
+    padding: 80px; /* Reduce padding on large screens */
+  }
+
+  .service-card {
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add margin for better spacing */
+  }
+
+  .modal-content {
+    max-width: 500px; /* Adjust modal width on smaller screens */
   }
 }
 
+/* Media query for tablets (max-width: 768px) */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(1, 1fr);
+  .services-section {
+    padding: 60px; /* Further reduce padding for tablets */
+  }
+
+  .service-text {
+    padding: 15px; /* Reduce padding inside cards */
+  }
+
+  .service-card button {
+    font-size: 0.9rem; /* Reduce button font size */
+    padding: 0.4rem 1rem; /* Adjust button padding */
+  }
+
+  .modal-content {
+    max-width: 400px; /* Adjust modal width */
   }
 }
 
+/* Media query for mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .services-section {
+    padding: 40px; /* Minimal padding on mobile */
+  }
 
+  .services-grid {
+    margin-top: 30px;
+  }
+
+  .section-title {
+    font-size: 1.5rem; /* Smaller font size for title */
+  }
+
+  .service-title {
+    font-size: 1.2rem; /* Reduce service card title font size */
+  }
+
+  .service-description {
+    font-size: 0.9rem; /* Reduce service description font size */
+  }
+
+  .modal-content {
+    padding: 15px; /* Less padding for modal */
+    max-width: 350px; /* Adjust modal size */
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem; /* Reduce modal heading size */
+  }
+
+  .modal-content p {
+    font-size: 1rem; /* Adjust modal text size */
+  }
+
+  .close-modal {
+    font-size: 20px; /* Smaller close icon */
+  }
+}
+
+/* Modal Styles */
 .modal {
   display: flex;
   justify-content: center;
@@ -120,14 +184,16 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   animation: fadeIn 0.3s ease;
+  padding: 20px; /* Add padding to ensure content fits well on smaller screens */
+  overflow-y: auto; /* Ensure scrollability for long content on smaller screens */
 }
 
 .modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
+  width: 100%; /* Make the modal content responsive */
+  max-width: 600px; /* Limit the width on larger screens */
   text-align: left;
   position: relative;
   animation: scaleUp 0.3s ease;
@@ -167,7 +233,6 @@
   }
 }
 
-
 .modal-content h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
@@ -178,4 +243,41 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
+}
+
+/* Responsive Modal for Smaller Devices */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px; /* Keep sufficient padding for readability */
+  }
+
+  .modal-content h3 {
+    font-size: 1.5rem; /* Reduce modal heading size for smaller screens */
+  }
+
+  .modal-content p {
+    font-size: 1rem; /* Adjust text size for better readability */
+  }
+
+  .close-modal {
+    font-size: 20px; /* Slightly smaller close icon */
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    padding: 15px; /* Slightly reduce padding */
+  }
+
+  .modal-content h3 {
+    font-size: 1.3rem; /* Further reduce heading size */
+  }
+
+  .modal-content p {
+    font-size: 0.95rem; /* Adjust body text size */
+  }
+
+  .close-modal {
+    font-size: 18px; /* Smaller close icon for mobile */
+  }
 }

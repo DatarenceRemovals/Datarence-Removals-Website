@@ -4,6 +4,7 @@ import '../styles/Navbar.css';
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('#');  
   const [isWiggling, setIsWiggling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +19,7 @@ const Navbar = () => {
 
   const handleLinkClick = (hash) => {
     setActiveLink(hash);
+    setIsMenuOpen(false); // Close menu on link click
   };
 
   return (
@@ -27,8 +29,15 @@ const Navbar = () => {
         <a href="/" aria-label="Homepage">MyLogo</a>
       </div>
 
+      {/* Hamburger Menu Icon */}
+      <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       {/* Navigation Links */}
-      <ul className="nav-links" role="menu">
+      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} role="menu">
         <li role="menuitem">
           <a 
             href="#"
@@ -82,7 +91,7 @@ const Navbar = () => {
       </ul>
 
       {/* Navigation Buttons */}
-      <div className="nav-btn">
+      <div className={`nav-btn ${isMenuOpen ? 'active' : ''}`}>
         {/* Email Button */}
         <button className="contact-btn" aria-label="Send us an email">
           <a href="mailto:datarenceremovals@gmail.com" className="mail-link">Send us a mail</a>

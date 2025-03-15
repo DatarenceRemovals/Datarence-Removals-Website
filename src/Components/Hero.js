@@ -74,7 +74,7 @@ function Hero() {
             className="typed-paragraph"
           />
 
-          <div className="hero-btns" data-aos="fade-up" data-aos-duration="10000">
+          <div className="hero-btns">
             <button
               className={`apply-btn ${isHovered ? "no-arrow" : ""}`}
               onMouseEnter={() => setIsHovered(true)}

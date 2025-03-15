@@ -3,14 +3,12 @@
     background-image: url("/public/images/grid-blocks.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #065860;
-    height: 100vh;
+    height: auto;
     margin: 0;
-    min-height: 100vh;
   }
   
   .hero-content {
@@ -26,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 100px 50px;
+    height: 100%;
   }
 
   .hero-img {
@@ -56,7 +55,7 @@
     margin-bottom: 16px;
     max-width: 711px;
     font-weight: bolder;
-    min-height: 100px;
+    min-height: 200px;
   }
   
 .typed-paragraph {
@@ -64,7 +63,7 @@
     margin-bottom: 24px;
     color: #cacece;
     max-width: 681px;
-    min-height: 120px;
+    min-height: 173px;
   }
   
   
@@ -88,78 +87,123 @@
     border-radius: 5px;
   }
 
-  
-  
-  
-  
-  @media (max-width: 1024px) {
-    .hero {
-      padding: 50px;
-    }
-  
-    .hero-content {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .hero-img {
-      max-width: 400px;
-      margin: 0 auto;
-      margin-top: 2rem;
-      flex: 50%;
-    }
-  
-    .hero-txt {
-      max-width: 100%;
-      flex-basis: 100%;
-      flex: 50%;
-    }
-  
-    .typed-heading {
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      max-width: none;
-    }
-  
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+
+  .hero{
+    height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-txt {
+    padding: 100px 20px;
+    flex: unset;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements */
+    text-align: center; /* Center text */
+  }
+
+  .hero-img {
+    flex: unset;
+    width: 100%;
+  }
+
+  .hero-img img {
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  #bootcamp-title {
+    font-size: 16px;  /* Adjusted font size */
+  }
+
+  .typed-heading {
+    font-size: 40px;  /* Adjusted font size */
+    margin-bottom: 20px;
+    min-height: 10px;
+  }
+
   .typed-paragraph {
-      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    }
-  
-    .apply-btn {
-      font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
-    }
+    font-size: 18px;  /* Adjusted font size */
+    margin-bottom: 24px;
+    max-width: 100%;
+    margin-top: 0;
   }
-  
-  
-  @media (max-width: 768px) {
-    .hero {
-      padding: 0 40px;
-      padding-bottom: 100px;
-    }
-  
-    .hero-content {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .typed-heading {
-      font-size: clamp(1.5rem, 5vw, 2rem);
-    }
-  
+
+  .hero-btns {
+    margin-top: 0;  /* Adjusted margin */
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 16px;  /* Adjusted font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    justify-content: center;
+    height: auto;
+  }
+
+  #bootcamp-title {
+    font-size: 13px;  /* Adjusted font size */
+  }
+
+  .hero-txt {
+    padding: 100px 15px;
+    align-items: center; /* Center elements */
+    text-align: center; /* Center text */
+  }
+
+  .typed-heading {
+    font-size: 40px;  /* Adjusted font size */
+    margin-bottom: 12px;
+  }
+
   .typed-paragraph {
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-    }
-  
-  
-    .apply-btn,
-    .curriculum-btn {
-      font-size: clamp(0.8rem, 1.6vw, 1rem) !important;
-      border: 0.1px solid black;
-    }
+    font-size: 16px;  /* Adjusted font size */
   }
-  
-  @media (max-width: 467px) {
-    .hero {
-      padding: 0 20px;
-      padding-bottom: 100px;
-    }
+
+  .hero-img img {
+    height: 50vh;
   }
+}
+
+@media (max-width: 480px) {
+  .hero-txt {
+    padding: 100px 10px;
+    align-items: center; /* Center elements */
+    text-align: center; /* Center text */
+  }
+
+  .typed-heading {
+    font-size: 30px;  /* Adjusted font size */
+  }
+
+  .typed-paragraph {
+    font-size: 14px;  /* Adjusted font size */
+    margin-bottom: 16px;  /* Adjusted margin */
+  }
+
+  .hero-img img {
+    height: 40vh;
+  }
+
+  .hero-btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  .apply-btn {
+    width: 100%;
+    font-size: 14px;  /* Adjusted font size */
+    padding: 8px 16px;  /* Adjusted padding */
+  }
+}
