@@ -98,7 +98,7 @@
       flex-direction: column; 
       padding: 100px 40px; /* Reduce padding on mobile */
       gap: 20px; /* Smaller gap for mobile */
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
   
     .about-us-img {
@@ -106,7 +106,7 @@
     }
   
     .about-us-img img {
-      min-height: 300px; /* Further reduce image height for mobile */
+      max-height: 300px; /* Further reduce image height for mobile */
       border-radius: 10px; /* Further reduce border-radius */
     }
   
@@ -135,7 +135,7 @@
     }
 
     .about-us-img img{
-        max-height: 430px;
+        max-height: 250px;
     }
 
   }
