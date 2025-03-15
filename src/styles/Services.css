@@ -134,7 +134,7 @@
 /* Media query for mobile (max-width: 576px) */
 @media (max-width: 576px) {
   .services-section {
-    padding: 40px; /* Minimal padding on mobile */
+    padding: 100px 20px; /* Minimal padding on mobile */
   }
 
   .services-grid {

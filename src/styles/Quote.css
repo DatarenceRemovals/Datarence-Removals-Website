@@ -1,146 +1,252 @@
 .quote-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    gap: 20px;
-    background-color: #065860;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    min-height: 600px;
-    color: white;
-  }
-  
-  .quote-text, .quote-form {
-    flex: 1;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 60px;
+  gap: 20px;
+  background-color: #065860;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 600px;
+  color: white;
+}
+
+.quote-text,
+.quote-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.quote-text {
+  background-image: url("/public/images/grid-blocks.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.quote-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #f6bb61;
+}
+
+.quote-text p {
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+.quote-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #2d2d2d; /* Lighter shade of black */
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+form h2 {
+  color: #065860;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.progress-indicator {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px; /* Added gap between buttons */
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #f6bb61;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6a444;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-group div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-top: 0;
+}
+
+.form-group select {
+  width: 100%;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .quote-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
-  .quote-text{
-    background-image: url("/public/images/grid-blocks.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .quote-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #f6bb61;
-  }
-  
-  .quote-text p {
-    font-size: 1.2rem;
-  }
-  
+  .quote-text,
   .quote-form {
-    background-color: white;
-    border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: black;
   }
 
-  form h2{
-    color: #065860;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
+  .quote-text {
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-group label {
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-  }
-  
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  .error {
-    border-color: red;
-  }
-  
-  .error-text {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
-  .success-message {
-    text-align: center;
-  }
-  
-  .progress-indicator {
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-  }
-  
-  .form-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 12px 20px;
-    background-color: #f6bb61;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #e6a444;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
- 
-  .form-group div {
-    display: flex;
     align-items: center;
+    text-align: center;
+  }
+
+  .quote-text h1 {
+    font-size: 2rem;
+  }
+
+  .quote-text p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .form-navigation button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quote-container {
+    padding: 100px 40px;
+  }
+
+  .quote-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .quote-form {
+    width: auto;
+    min-width: 350px;
+  }
+
+  .quote-text p {
+    font-size: 15px;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quote-container {
+    padding: 50px 20px;
+  }
+
+  .quote-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .quote-form {
+    min-width: 290px;
+  }
+
+  .quote-text p {
+    font-size: 14px;
+  }
+
+  form h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-navigation {
+    flex-direction: column; /* Stack buttons vertically for smaller screens */
     gap: 10px;
   }
-  
-  .form-group input[type="checkbox"] {
-    width: auto;
-    margin-top: 0;
-  }
-  
-  .form-group select {
+
+  .form-navigation button {
     width: 100%;
   }
-  
-  select[multiple] {
-    height: auto;
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
-  
+}

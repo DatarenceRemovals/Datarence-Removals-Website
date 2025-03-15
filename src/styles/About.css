@@ -16,17 +16,18 @@
     flex: 1;
     width: 50%;
     animation: float 6s ease-in-out infinite;
+    display: block;
 }
 
 .about-us-img img {
-    width: 100%;
+    max-width: 95%;
     height: 100%;
     min-height: 600px;
     border-radius: 20px;
     border: 5px solid white;
 }
 
-/* Keyframe animation for floating effect */
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -56,3 +57,79 @@
     font-size: 1.1rem;
     line-height: 1.6;
 }
+
+/* Base CSS remains the same */
+
+/* Media Queries for Responsiveness */
+
+/* Tablet view (max-width: 992px) */
+@media (max-width: 992px) {
+    .about-us {
+      padding: 80px; /* Reduce padding for tablets */
+      gap: 30px;
+    }
+  
+    .about-us-img,
+    .about-us-txt {
+      width: 100%; /* Make images and text take full width on tablets */
+    }
+  
+    .about-us-img img {
+      min-height: 400px; /* Adjust image height for smaller screens */
+      border-radius: 15px; /* Slightly reduce border-radius */
+    }
+  
+    .about-us-txt {
+      padding: 20px; /* Adjust padding for text section */
+    }
+  
+    .about-us-txt h1 {
+      font-size: 2rem; /* Reduce heading size for tablets */
+    }
+  
+    .about-us-txt p {
+      font-size: 1rem; /* Slightly reduce paragraph font size */
+    }
+  }
+  
+  /* Mobile view (max-width: 576px) */
+  @media (max-width: 576px) {
+    .about-us {
+      flex-direction: column; /* Stack image and text vertically on mobile */
+      padding: 50px 40px; /* Reduce padding on mobile */
+      gap: 20px; /* Smaller gap for mobile */
+    }
+  
+    .about-us-img {
+      width: 100%; /* Make image take full width */
+    }
+  
+    .about-us-img img {
+      min-height: 300px; /* Further reduce image height for mobile */
+      border-radius: 10px; /* Further reduce border-radius */
+    }
+  
+    .about-us-txt {
+      width: 100%; /* Make text section take full width */
+      padding: 15px; /* Further reduce padding */
+    }
+  
+    .about-us-txt h1 {
+      font-size: 1.8rem; /* Reduce heading size for mobile */
+    }
+  
+    .about-us-txt p {
+      font-size: 0.95rem; /* Further reduce paragraph font size for readability */
+      line-height: 1.5; /* Adjust line height for readability */
+    }
+  }
+
+  @media (max-width: 467px) {
+    .about-us {
+      flex-direction: column; /* Stack image and text vertically on mobile */
+      padding: 100px 20px !important; /* Reduce padding on mobile */
+      gap: 20px; /* Smaller gap for mobile */
+    }
+
+  }
+  
