@@ -102,83 +102,83 @@
   }
   
  
-/* Base CSS remains the same */
 
-/* Media Queries for Responsiveness */
 
-/* Tablet view (max-width: 768px) */
+
+
+
 
 @media (max-width: 1024px) {
   .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns for tablets */
-    gap: 1rem; /* Adjust gap for tablets */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
 }
 
 @media (max-width: 768px) {
   .testimonial-container {
-    padding: 80px 40px; /* Reduce padding for tablets */
+    padding: 80px 40px;
   }
 
   .testimonial-container h1 {
-    font-size: 2rem; /* Adjust heading font size for tablets */
+    font-size: 2rem;
   }
 
   .testimonial-container h2 {
-    font-size: 1.5rem; /* Reduce subheading font size for tablets */
-    margin-bottom: 40px; /* Adjust bottom margin */
+    font-size: 1.5rem;
+    margin-bottom: 40px;
   }
 
   .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust grid to 2 columns for tablets */
-    gap: 1rem; /* Adjust gap for tablets */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .testimonial-card {
-    padding: 2rem 1rem; /* Reduce padding inside testimonial cards */
-    max-width: 350px; /* Adjust max width of cards */
+    padding: 2rem 1rem;
+    max-width: 350px;
   }
 
   .testimonial-card p {
-    font-size: 0.95rem; /* Slightly reduce paragraph font size */
+    font-size: 0.95rem;
   }
 
   .testimonial-card h4 {
-    font-size: 1.1rem; /* Reduce name font size */
+    font-size: 1.1rem;
   }
 }
 
-/* Mobile view (max-width: 500px) */
+
 @media (max-width: 500px) {
   .testimonial-container {
-    padding: 100px 20px; /* Further reduce padding for mobile */
+    padding: 100px 20px;
   }
 
   .testimonial-container h1 {
-    font-size: 1.8rem; /* Further reduce heading font size */
+    font-size: 1.8rem;
   }
 
   .testimonial-container h2 {
-    font-size: 1.3rem; /* Further reduce subheading font size */
-    margin-bottom: 30px; /* Adjust margin for mobile */
+    font-size: 1.3rem;
+    margin-bottom: 30px;
   }
 
   .testimonial-grid {
-    grid-template-columns: 1fr; /* Switch to single-column layout for mobile */
-    gap: 0.8rem; /* Reduce gap between cards */
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .testimonial-card {
-    padding: 1.5rem 1rem; /* Further reduce padding inside testimonial cards */
-    max-width: 300px; /* Adjust card size for mobile */
+    padding: 1.5rem 1rem;
+    max-width: 300px;
   }
 
   .testimonial-card p {
-    font-size: 0.9rem; /* Further reduce paragraph font size */
+    font-size: 0.9rem;
   }
 
   .testimonial-card h4 {
-    font-size: 1rem; /* Adjust name font size for mobile */
+    font-size: 1rem;
   }
 }

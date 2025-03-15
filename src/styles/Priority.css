@@ -61,94 +61,94 @@
     color: #555;
   }
   
-  /* Base CSS remains unchanged */
+ 
 
-/* Media query for tablets (max-width: 1024px) */
+
 @media (max-width: 1024px) {
   .priority {
-    padding: 100px 50px;  /* Reduce padding */
+    padding: 100px 50px; 
   }
 
   .targets {
-    flex-wrap: wrap;  /* Allow wrapping for targets */
-    gap: 50px;  
+    flex-wrap: wrap; 
+    gap: 25px;  
     max-width: 700px;
-    margin: 0 auto;      /* Increase gap for better spacing */
+    margin: 0 auto;     
+    margin-top: 30px;
   }
 
   .target {
-    width: 40%;       /* Make each target take more width */
+    width: 40%;      
   }
 
   .priority h1 {
-    font-size: 2rem;  /* Adjust font size */
+    font-size: 2rem; 
   }
 
   .target h2 {
-    font-size: 1.1rem;  /* Slightly smaller font size for subheading */
+    font-size: 1.1rem; 
   }
 
   .target p {
-    font-size: 0.9rem;  /* Adjust paragraph font size */
+    font-size: 0.9rem; 
   }
 }
 
-/* Media query for mobile (max-width: 768px) */
+
 @media (max-width: 768px) {
   .priority {
-    padding: 100px 30px;   /* Further reduce padding */
+    padding: 100px 30px;  
   }
 
   .targets {
-    flex-direction: column;  /* Stack the targets vertically */
+    flex-direction: column; 
     align-items: center;
   }
 
   .target {
-    width: 100%;    /* Full width for each target on mobile */
+    width: 100%;   
     max-width: 350px;
   }
 
   .priority h1 {
-    font-size: 1.8rem;  /* Smaller font size for heading */
+    font-size: 1.8rem; 
   }
 
   .target h2 {
-    font-size: 1rem;    /* Reduce subheading size */
+    font-size: 1rem;   
   }
 
   .target p {
-    font-size: 0.85rem; /* Adjust paragraph font size */
+    font-size: 0.85rem;
   }
 
   .icon img {
-    width: 80px;   /* Reduce icon size */
+    width: 80px;  
     height: 80px;
   }
 }
 
-/* Media query for small mobile screens (max-width: 480px) */
+
 @media (max-width: 480px) {
   .priority {
-    padding: 100px 20px;   /* Minimal padding on small screens */
+    padding: 100px 20px;  
   }
 
 
   .target{
-    margin-top: 50px;
     max-width: 250px;
   }
 
   .target h2 {
-    font-size: 0.9rem;   /* Further reduce subheading size */
+    font-size: 0.9rem;  
   }
 
   .target p {
-    font-size: 0.9rem;   /* Adjust paragraph font size */
+    font-size: 0.9rem;  
   }
 
   .icon img {
-    width: 60px;   /* Further reduce icon size */
+    width: 60px;  
     height: 60px;
   }
 }

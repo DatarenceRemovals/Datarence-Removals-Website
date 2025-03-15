@@ -63,7 +63,7 @@
 /* Media Queries for Responsiveness */
 
 /* Tablet view (max-width: 992px) */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .about-us {
       padding: 80px; /* Reduce padding for tablets */
       gap: 30px;
@@ -93,11 +93,12 @@
   }
   
   /* Mobile view (max-width: 576px) */
-  @media (max-width: 576px) {
+  @media (max-width: 950px) {
     .about-us {
-      flex-direction: column; /* Stack image and text vertically on mobile */
-      padding: 50px 40px; /* Reduce padding on mobile */
+      flex-direction: column; 
+      padding: 100px 40px; /* Reduce padding on mobile */
       gap: 20px; /* Smaller gap for mobile */
+      margin-bottom: 0;
     }
   
     .about-us-img {
@@ -112,6 +113,8 @@
     .about-us-txt {
       width: 100%; /* Make text section take full width */
       padding: 15px; /* Further reduce padding */
+      margin-bottom: 0;
+      padding-bottom: 0 !important;
     }
   
     .about-us-txt h1 {
@@ -129,6 +132,10 @@
       flex-direction: column; /* Stack image and text vertically on mobile */
       padding: 100px 20px !important; /* Reduce padding on mobile */
       gap: 20px; /* Smaller gap for mobile */
+    }
+
+    .about-us-img img{
+        max-height: 430px;
     }
 
   }

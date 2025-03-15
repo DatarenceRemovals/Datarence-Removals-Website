@@ -212,7 +212,7 @@ select[multiple] {
 
 @media screen and (max-width: 480px) {
   .quote-container {
-    padding: 50px 20px;
+    padding: 100px 20px;
   }
 
   .quote-text {
@@ -248,5 +248,12 @@ select[multiple] {
   button {
     padding: 8px 12px;
     font-size: 0.9rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .quote-form {
+    min-width: 260px;
   }
 }
