@@ -209,3 +209,16 @@
     max-width: 80px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+    right: 20px; /* Match with the navbar's padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    right: 15px; /* Match with the navbar's padding */
+  }
+}
