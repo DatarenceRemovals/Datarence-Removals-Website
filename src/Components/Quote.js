@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; // Import axios if using it
 import "../styles/Quote.css";
 
 function Quote() {
@@ -27,8 +28,8 @@ function Quote() {
   const [step, setStep] = useState(1); 
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
-  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
@@ -61,9 +62,35 @@ function Quote() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateStep()) {
-      setFormSubmitted(true);
-      
-      console.log("Form data:", formData);
+      const formattedData = {
+        ...formData,
+        services: Object.keys(formData.services)
+          .filter((key) => formData.services[key])
+          .join(", "), // Send selected services as a comma-separated string
+      };
+
+      // Formspree submission via fetch API
+      fetch("https://submit-form.com/QWcKPtx2F", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formattedData),
+      })
+        .then((response) => {
+          console.log(response);
+          if (response.ok) {
+            setFormSubmitted(true); // Show success message
+          } else {
+            return response.text().then((text) => {
+              throw new Error(text);
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Submission error:", error);
+          setSubmitError("There was a problem submitting the form. Please try again.");
+        });
     }
   };
 
@@ -208,92 +235,104 @@ function Quote() {
               </>
             )}
 
-            {step === 3 && (
-              <>
-                <h2 className="form-step-title">Additional Information</h2>
-                <div className="form-group">
-                  <label>Additional Services</label>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="packing"
-                      checked={formData.services.packing}
-                      onChange={handleChange}
-                      aria-label="Packing Services"
-                    />
-                    <label>Packing Services</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="unpacking"
-                      checked={formData.services.unpacking}
-                      onChange={handleChange}
-                      aria-label="Unpacking Services"
-                    />
-                    <label>Unpacking Services</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="storage"
-                      checked={formData.services.storage}
-                      onChange={handleChange}
-                      aria-label="Storage Services"
-                    />
-                    <label>Storage Services</label>
-                  </div>
-                </div>
+{step === 3 && (
+  <>
+    <h2 className="form-step-title">Additional Information</h2>
+    <div className="form-group">
+      <label>Additional Services</label>
+      <div>
+        <input
+          type="checkbox"
+          name="packing"
+          checked={formData.services.packing}
+          onChange={handleChange}
+          aria-label="Packing Services"
+        />
+        <label>Packing Services</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="unpacking"
+          checked={formData.services.unpacking}
+          onChange={handleChange}
+          aria-label="Unpacking Services"
+        />
+        <label>Unpacking Services</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="storage"
+          checked={formData.services.storage}
+          onChange={handleChange}
+          aria-label="Storage Services"
+        />
+        <label>Storage Services</label>
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="dismantling"
+          checked={formData.services.dismantling}
+          onChange={handleChange}
+          aria-label="Dismantling Furniture"
+        />
+        <label>Dismantling Furniture</label>
+      </div>
+    </div>
 
-                <div className="form-group">
-                  <label>Special Items (e.g., piano, antique furniture)</label>
-                  <input
-                    type="text"
-                    name="specialItems"
-                    value={formData.specialItems}
-                    onChange={handleChange}
-                    aria-label="Special Items"
-                    placeholder="List any special items here"
-                  />
-                </div>
+    <div className="form-group">
+      <label htmlFor="specialItems">Special Items (e.g., piano, safe)</label>
+      <input
+        type="text"
+        name="specialItems"
+        value={formData.specialItems}
+        onChange={handleChange}
+        aria-label="Special Items"
+      />
+    </div>
 
-                <div className="form-group">
-                  <label>Budget</label>
-                  <input
-                    type="number"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    aria-label="Budget"
-                  />
-                </div>
+    <div className="form-group">
+      <label htmlFor="budget">Moving Budget</label>
+      <input
+        type="text"
+        name="budget"
+        value={formData.budget}
+        onChange={handleChange}
+        aria-label="Moving Budget"
+      />
+    </div>
 
-                <div className="form-group">
-                  <label>Additional Notes</label>
-                  <textarea
-                    name="notes"
-                    value={formData.notes}
-                    onChange={handleChange}
-                    aria-label="Additional Notes"
-                    placeholder="Any special requests or instructions?"
-                  ></textarea>
-                </div>
+    {/* Insurance field */}
+    <div className="form-group">
+      <label htmlFor="insurance">Insurance</label>
+      <input
+        type="text"
+        name="insurance"
+        value={formData.insurance}
+        onChange={handleChange}
+        aria-label="Insurance"
+      />
+    </div>
 
-                <div className="form-group">
-                  <label>Do you require insurance coverage?</label>
-                  <input
-                    type="text"
-                    name="insurance"
-                    value={formData.insurance}
-                    onChange={handleChange}
-                    aria-label="Insurance"
-                  />
-                </div>
-              </>
-            )}
+    {/* Notes field */}
+    <div className="form-group">
+      <label htmlFor="notes">Additional Notes</label>
+      <textarea
+        name="notes"
+        value={formData.notes}
+        onChange={handleChange}
+        aria-label="Additional Notes"
+        rows="4"
+      ></textarea>
+    </div>
+  </>
+)}
 
-            {/* Progress Indicator */}
-            <div className="progress-indicator">
+
+ {/* Progress Indicator */}
+ <div className="progress-indicator">
               <p>Step {step} of 3</p>
             </div>
 
@@ -305,6 +344,8 @@ function Quote() {
             </div>
           </form>
         )}
+
+        {submitError && <p className="error-text">{submitError}</p>}
       </div>
     </div>
   );
