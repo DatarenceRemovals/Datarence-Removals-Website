@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="footer-content">
           {/* Company Logo Section */}
           <div className="footer-logo">
-            <h4>Logo</h4>
+          <img 
+                  src="/images/datarence-light.png" 
+                  alt="Daterence Removals Logo" 
+                  loading="lazy"
+                />
           </div>
 
           {/* Navigation Links */}
@@ -29,7 +33,7 @@ const Footer = () => {
               <ul>
                 <li>Reach out to us</li>
                 <li><a href="tel:+447463933679">07463 933 679</a></li>
-                <li><a href="mailto:datarenceremovals@gmail.com">datarenceremovals@gmail.com</a></li>
+                <li><a href="mailto:daterenceremovals@gmail.com">daterenceremovals@gmail.com</a></li>
                 <li>Manchester</li>
               </ul>
             </div>
@@ -38,7 +42,7 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="footer-bottom">
-          <p>&copy; 2025 Datarence Removals.</p>
+          <p>&copy; 2025 Daterence Removals.</p>
           
           {/* Social Media Icons */}
           <div className="social-icons">

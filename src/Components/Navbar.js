@@ -26,7 +26,11 @@ const Navbar = () => {
     <nav className="navbar" aria-label="Primary Navigation">
       {/* Logo */}
       <div className="logo">
-        <a href="/" aria-label="Homepage">MyLogo</a>
+      <img 
+                  src="/images/datarence-dark.png" 
+                  alt="Daterence Removals Logo" 
+                  loading="lazy"
+                />
       </div>
 
       {/* Hamburger Menu Icon */}
@@ -94,7 +98,7 @@ const Navbar = () => {
       <div className={`nav-btn ${isMenuOpen ? 'active' : ''}`}>
         {/* Email Button */}
         <button className="contact-btn" aria-label="Send us an email">
-          <a href="mailto:datarenceremovals@gmail.com" className="mail-link">Send us a mail</a>
+          <a href="mailto:daterenceremovals@gmail.com" className="mail-link">Send us a mail</a>
         </button>
 
         {/* Get a Quote Button with Wiggle Effect */}

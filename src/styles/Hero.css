@@ -9,7 +9,6 @@
     background-color: #065860;
     height: auto;
     margin: 0;
-    min-height: 100vh;
   }
   
   .hero-content {
@@ -88,7 +87,13 @@
     border-radius: 5px;
   }
 
-/* Media queries for responsiveness */
+  @media (max-height: 840px) {
+    .hero {
+      min-height: none;
+      height: auto;
+    }
+  }
+
 @media (max-width: 1024px) {
 
   .hero{
@@ -106,8 +111,8 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center elements */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .hero-img {
@@ -121,30 +126,30 @@
   }
 
   #bootcamp-title {
-    font-size: 16px;  /* Adjusted font size */
+    font-size: 16px; 
     margin-bottom: 40px;
   }
 
   .typed-heading {
-    font-size: 40px;  /* Adjusted font size */
+    font-size: 40px; 
     margin-bottom: 50px;
     min-height: 10px;
   }
 
   .typed-paragraph {
-    font-size: 18px;  /* Adjusted font size */
+    font-size: 18px; 
     margin-bottom: 24px;
     max-width: 100%;
     margin-top: 0;
   }
 
   .hero-btns {
-    margin-top: 0;  /* Adjusted margin */
+    margin-top: 0; 
   }
 
   .apply-btn {
     padding: 10px 20px;
-    font-size: 16px;  /* Adjusted font size */
+    font-size: 16px; 
   }
 }
 
@@ -155,21 +160,21 @@
   }
 
   #bootcamp-title {
-    font-size: 13px;  /* Adjusted font size */
+    font-size: 13px; 
   }
 
   .hero-txt {
     padding: 100px 15px;
-    align-items: center; /* Center elements */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .typed-heading {
-    font-size: 40px;  /* Adjusted font size */
+    font-size: 40px; 
   }
 
   .typed-paragraph {
-    font-size: 16px;  /* Adjusted font size */
+    font-size: 16px; 
   }
 
   .hero-img img {
@@ -180,17 +185,17 @@
 @media (max-width: 480px) {
   .hero-txt {
     padding: 100px 10px;
-    align-items: center; /* Center elements */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .typed-heading {
-    font-size: 30px;  /* Adjusted font size */
+    font-size: 30px; 
   }
 
   .typed-paragraph {
-    font-size: 14px;  /* Adjusted font size */
-    margin-bottom: 16px;  /* Adjusted margin */
+    font-size: 14px; 
+    margin-bottom: 16px; 
   }
 
   .hero-img img {
@@ -204,7 +209,7 @@
 
   .apply-btn {
     width: 100%;
-    font-size: 14px;  /* Adjusted font size */
-    padding: 8px 16px;  /* Adjusted padding */
+    font-size: 14px; 
+    padding: 8px 16px; 
   }
 }

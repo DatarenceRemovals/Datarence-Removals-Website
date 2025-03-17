@@ -14,7 +14,7 @@ function Hero() {
     {
       heading: "Seamless Home Removals is Our Promise",
       paragraph:
-        "At Datarence Removals, we take pride in offering smooth, stress-free home removal services. From packing your belongings to safely transporting them, we handle everything with care and precision, ensuring a hassle-free move.",
+        "At Daterence Removals, we take pride in offering smooth, stress-free home removal services. From packing your belongings to safely transporting them, we handle everything with care and precision, ensuring a hassle-free move.",
     },
     {
       heading: "Your Trusted Home Removal Experts",
@@ -53,7 +53,7 @@ function Hero() {
       <div className="hero-content">
         <div className="hero-txt" data-aos="fade-right" data-aos-duration="10000">
           <p id="bootcamp-title" data-aos="fade-right" data-aos-duration="10000">
-            WELCOME TO DATARENCE REMOVALS
+            WELCOME TO DATERENCE REMOVALS
           </p>
 
           <ReactTyped

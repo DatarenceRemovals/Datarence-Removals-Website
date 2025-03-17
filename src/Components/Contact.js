@@ -10,10 +10,10 @@ function Contact() {
             <p>
               <i className="fas fa-envelope" aria-hidden="true"></i>{" "}
               <a
-                href="mailto:datarenceremovals@gmail.com"
-                aria-label="Email datarenceremovals"
+                href="mailto:daterenceremovals@gmail.com"
+                aria-label="Email daterenceremovals"
               >
-                datarenceremovals@gmail.com
+                daterenceremovals@gmail.com
               </a>
             </p>
             <p>

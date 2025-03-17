@@ -20,14 +20,14 @@
 
 .about-us-img img {
     width: 100%;
-    height: auto; /* Auto height for responsiveness */
+    height: auto;
     max-width: 95%;
     border-radius: 20px;
     border: 5px solid white;
-    object-fit: cover; /* Ensures image covers the space while maintaining aspect ratio */
+    object-fit: cover;
 }
 
-/* Animation for floating effect */
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -58,84 +58,84 @@
     line-height: 1.6;
 }
 
-/* Media Queries for Responsiveness */
 
-/* Tablet view (max-width: 1200px) */
+
+
 @media (max-width: 1200px) {
     .about-us {
-        padding: 80px; /* Reduce padding for tablets */
+        padding: 80px;
         gap: 30px;
     }
 
     .about-us-img,
     .about-us-txt {
-        width: 100%; /* Make images and text take full width on tablets */
+        width: 100%;
     }
 
     .about-us-img img {
-        max-height: 300px; /* Adjust image height for smaller screens */
-        border-radius: 15px; /* Slightly reduce border-radius */
+        max-height: 300px;
+        border-radius: 15px;
         height: auto;
     }
 
     .about-us-txt {
-        padding: 20px; /* Adjust padding for text section */
+        padding: 20px;
     }
 
     .about-us-txt h1 {
-        font-size: 2rem; /* Reduce heading size for tablets */
+        font-size: 2rem;
     }
 
     .about-us-txt p {
-        font-size: 1rem; /* Slightly reduce paragraph font size */
+        font-size: 1rem;
     }
 }
 
-/* Mobile view (max-width: 950px) */
+
 @media (max-width: 950px) {
     .about-us {
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 100px 40px; /* Reduce padding on mobile */
+        flex-direction: column;
+        padding: 100px 40px;
         gap: 20px;
         padding-bottom: 0;
     }
 
     .about-us-img {
-        width: 100%; /* Image takes full width */
+        width: 100%;
     }
 
     .about-us-img img {
-        max-height: 250px; /* Reduce image height for mobile */
+        max-height: 250px;
         height: auto;
-        border-radius: 10px; /* Further reduce border-radius */
+        border-radius: 10px;
     }
 
     .about-us-txt {
-        width: 100%; /* Text section takes full width */
-        padding: 15px; /* Further reduce padding */
+        width: 100%;
+        padding: 15px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
 
     .about-us-txt h1 {
-        font-size: 1.8rem; /* Reduce heading size for mobile */
+        font-size: 1.8rem;
     }
 
     .about-us-txt p {
-        font-size: 0.95rem; /* Reduce paragraph font size for mobile */
-        line-height: 1.5; /* Adjust line height for readability */
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
 
-/* Extra small screens (max-width: 467px) */
+
 @media (max-width: 467px) {
     .about-us {
-        padding: 100px 20px !important; /* Reduce padding on mobile */
-        gap: 20px; /* Smaller gap */
+        padding: 100px 20px !important;
+        gap: 20px;
     }
 
     .about-us-img img {
-        max-height: 200px; /* Further reduce image height for very small screens */
+        max-height: 200px;
         height: auto;
     }
 }

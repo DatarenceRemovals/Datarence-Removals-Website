@@ -15,6 +15,7 @@
   padding: 20px;
 }
 
+
 .quote-text {
   background-image: url("/public/images/grid-blocks.png");
   background-size: cover;
@@ -37,7 +38,7 @@
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #2d2d2d; /* Lighter shade of black */
+  color: #2d2d2d;
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
@@ -107,7 +108,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  gap: 15px; /* Added gap between buttons */
+  gap: 15px;
 }
 
 button {
@@ -148,7 +149,7 @@ select[multiple] {
   height: auto;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 1200px) {
   .quote-container {
     flex-direction: column;
@@ -241,7 +242,7 @@ select[multiple] {
   }
 
   .form-navigation {
-    flex-direction: column; /* Stack buttons vertically for smaller screens */
+    flex-direction: column;
     gap: 10px;
   }
 

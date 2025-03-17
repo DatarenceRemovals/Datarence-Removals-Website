@@ -3,6 +3,7 @@
     color: #ccc;
     font-family: "Onest", serif;
     padding: 0 97.65px;
+    border-radius: none;
   }
   
   .footer {
@@ -25,9 +26,10 @@
     margin-bottom: 1rem;
   }
   
-  .footer-logo img {
-    height: 32px;
-    width: 150px;
+  .footer-logo img{
+    width: 120px;
+    padding: 0;
+    height: 120px;
   }
   
   .footer-links {
@@ -107,11 +109,7 @@
     .footer {
       padding: 2rem 1rem;
     }
-  
-    .footer-logo img {
-      height: 28px;
-      width: 120px;
-    }
+
   
     .footer-links p {
       font-size: 16px;
@@ -150,10 +148,6 @@
       padding: 1.5rem 0.5rem;
     }
   
-    .footer-logo img {
-      height: 24px;
-      width: 100px;
-    }
   
     .footer-links {
       flex-wrap: wrap;
