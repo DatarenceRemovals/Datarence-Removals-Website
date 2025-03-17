@@ -95,7 +95,17 @@ textarea {
 }
 
 .success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin-top: 120px;
+}
+
+.success-message img{
+  width: 100px;
+  height: auto;
 }
 
 .progress-indicator {

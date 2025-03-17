@@ -132,7 +132,7 @@
 
 @media screen and (max-width: 1024px) {
   .navbar {
-    padding: 1rem 20px;
+    padding: 1rem 40px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -202,7 +202,7 @@
 
 @media screen and (max-width: 480px) {
   .navbar {
-    padding: 1rem 15px;
+    padding: 1rem 20px;
   }
 
   .logo img {
@@ -213,12 +213,12 @@
 @media screen and (max-width: 1024px) {
   .hamburger {
     display: flex;
-    right: 20px; /* Match with the navbar's padding */
+    right: 40px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hamburger {
-    right: 15px; /* Match with the navbar's padding */
+    right: 20px;
   }
 }

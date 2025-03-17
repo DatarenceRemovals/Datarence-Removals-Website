@@ -134,6 +134,9 @@
     padding: 100px 20px;  
   }
 
+  .priority h1{
+    margin-top: 50px;
+  }
 
   .target{
     max-width: 250px;

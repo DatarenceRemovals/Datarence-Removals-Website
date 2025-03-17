@@ -17,18 +17,18 @@ function Quote() {
       storage: false,
       dismantling: false,
     },
-    specialItems: [],
+    specialItems: "",
     contactMethod: "email",
     insurance: "",
     notes: "",
     budget: "",
   });
 
-  const [step, setStep] = useState(1); // Progress indicator step
+  const [step, setStep] = useState(1); 
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // Handle changes in form inputs
+  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
@@ -41,18 +41,6 @@ function Quote() {
     }
   };
 
-  const handleSpecialItemsChange = (e) => {
-    const { value } = e.target;
-    let items = [...formData.specialItems];
-    if (items.includes(value)) {
-      items = items.filter((item) => item !== value);
-    } else {
-      items.push(value);
-    }
-    setFormData({ ...formData, specialItems: items });
-  };
-
-  // Step-wise validation
   const validateStep = () => {
     let newErrors = {};
     if (step === 1) {
@@ -74,7 +62,7 @@ function Quote() {
     e.preventDefault();
     if (validateStep()) {
       setFormSubmitted(true);
-      // Handle form submission logic, such as sending data to backend
+      
       console.log("Form data:", formData);
     }
   };
@@ -101,6 +89,11 @@ function Quote() {
       <div className="quote-form">
         {formSubmitted ? (
           <div className="success-message">
+            <img 
+              src="/images/like.png" 
+              alt="Fast home removals with speed" 
+              loading="lazy" 
+            />
             <h2>Thank you!</h2>
             <p>Your quote request has been submitted successfully. We will contact you soon.</p>
           </div>
@@ -254,12 +247,14 @@ function Quote() {
 
                 <div className="form-group">
                   <label>Special Items (e.g., piano, antique furniture)</label>
-                  <select multiple={true} name="specialItems" onChange={handleSpecialItemsChange} aria-label="Special Items">
-                    <option value="bed">Bed</option>
-                    <option value="sofa">Sofa</option>
-                    <option value="fridge">Fridge</option>
-                    <option value="piano">Piano</option>
-                  </select>
+                  <input
+                    type="text"
+                    name="specialItems"
+                    value={formData.specialItems}
+                    onChange={handleChange}
+                    aria-label="Special Items"
+                    placeholder="List any special items here"
+                  />
                 </div>
 
                 <div className="form-group">
