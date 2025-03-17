@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #065860;
+    background-color: #032c30;
     height: auto;
     margin: 0;
   }
@@ -52,10 +52,10 @@
   
   .typed-heading {
     font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 16px;
     max-width: 711px;
     font-weight: bolder;
     min-height: 200px;
+    margin-top: 30px;
   }
   
 .typed-paragraph {
@@ -91,6 +91,12 @@
     .hero {
       min-height: none;
       height: auto;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    #bootcamp-title {
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
     }
   }
 
