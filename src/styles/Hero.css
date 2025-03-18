@@ -108,8 +108,15 @@
   }
 
   .hero {
-    background-image: url("/public/images/loading.jpg");
+    background-image: url("/public/images/hero-img1.jpg");
     position: relative;
+    animation: changeBg 30s infinite;
+  }
+
+  @keyframes changeBg {
+    0%, 33% { background-image: url("/public/images/hero-img1.jpg"); }
+    34%, 66% { background-image: url("/public/images/hero-img2.jpg"); }
+    67%, 100% { background-image: url("/public/images/hero-img3.jpg"); }
   }
   
   .hero::before {
@@ -214,7 +221,8 @@
 
 @media (max-width: 480px) {
   .hero{
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
   }
 
   .hero-txt {
