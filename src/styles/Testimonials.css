@@ -6,11 +6,16 @@
     padding-bottom: 200px;
     margin: 0;
   }
+
+  .testimonial-container h1{
+    color: #065860;
+  }
   
   .testimonial-container h2 {
     font-size: 1.8rem;
     margin-bottom: 50px;
     font-weight: 600;
+    color: #065860;
   }
   
  

@@ -40,7 +40,7 @@ const testimonials = [
   },
 ];
 
-// Helper function to display stars
+
 const renderStars = (rating) => {
   return [...Array(5)].map((_, i) => (
     <span key={i} className={i < rating ? "star-filled" : "star-empty"}>
