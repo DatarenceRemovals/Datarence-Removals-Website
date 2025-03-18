@@ -80,6 +80,7 @@ function Hero() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               aria-label="Request a quote for home removals"
+              onClick={() => document.getElementById("get-quote").scrollIntoView({ behavior: "smooth" })}
             >
               Request Quote {isHovered ? "" : "➜"}
             </button>
