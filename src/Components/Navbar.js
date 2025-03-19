@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const handleLinkClick = (hash) => {
     setActiveLink(hash);
-    setIsMenuOpen(false); // Close menu on link click
+    setIsMenuOpen(false);
   };
 
   return (

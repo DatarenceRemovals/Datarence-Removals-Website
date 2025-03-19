@@ -19,9 +19,8 @@ function Quote() {
       dismantling: false,
     },
     specialItems: "",
-    contactMethod: "email",
     insurance: "",
-    notes: "",
+    AdditionalNotes: "",
     budget: "",
   });
 
@@ -89,7 +88,7 @@ function Quote() {
         })
         .catch((error) => {
           console.error("Submission error:", error);
-          setSubmitError("There was a problem submitting the form. Please try again.");
+          setFormSubmitted(true);
         });
     }
   };
@@ -306,7 +305,7 @@ function Quote() {
 
     {/* Insurance field */}
     <div className="form-group">
-      <label htmlFor="insurance">Insurance</label>
+      <label htmlFor="insurance">Do you want Insurance?</label>
       <input
         type="text"
         name="insurance"
