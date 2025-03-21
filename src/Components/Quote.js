@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; // Import axios if using it
+import axios from "axios"; 
 import "../styles/Quote.css";
 
 function Quote() {
